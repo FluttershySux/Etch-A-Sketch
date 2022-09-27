@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body{
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.heading {
+    text-align: center;
+    margin-top:50px;
+    font-size:4rem;
+}
+
+.main {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display:grid;
+    min-width:500px;
+    height:500px;
+    margin: 100px 0 0 0;
+    border:solid 2px;
+}
+
+.controls {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-right:50px;
+    align-items: center;
+}
+
+.pen-colour, .background-colour {
+    outline: none;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    border-radius: 2px;
+    width:80px;
+    height:40px;
+}
+
+.colour-text {
+    position:relative;
+    bottom:10px;
+    font-weight:400;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-right:12px;
+}
+
+.colour-text.background {
+    margin-right:2px;
+}
+
+.button {
+    display:inline-block;
+    padding:0.75em 3em;
+    border:0.16em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#333;
+    text-align:center;
+    transition: all 0.15s;
+    border-radius:5px;
+    width:175px;
+    }
+
+.button:hover {
+    color:#DDDDDD;
+    background-color: #333;
+    border-color:#DDDDDD;
+    }
+
+ .button:active {
+    color:#BBBBBB;
+    border-color:#BBBBBB;
+    }
+
+.grid-lines {
+    border: solid 1.5px;
+}
+
+.no-grid-lines {
+    border: 0;
+}
+
+@media (max-width:800px) {
+    .main {
+        flex-direction: column;
+    }
+    .heading {
+        font-size:3rem;
+    }
+    .grid {
+        order:1;
+        margin-top:0;
+        min-width:400px;
+        height:400px;
+    }
+    .controls {
+        order:2;
+        flex-direction: row;
+        justify-content: center;
+        margin: 30px 0 0 0;
+        width:200px;
+    }
+    .button {
+        width:175px;
+    }
+}
+
+@media (max-width:600px) {
+    .grid {
+        min-width:300px;
+        height:300px;
+    }
+}
+
+
